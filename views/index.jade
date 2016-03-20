@@ -1,0 +1,25 @@
+extends layout
+
+block content
+	#loading
+		h1 Hello #{user.displayName}
+		p Searching for game. Please wait!
+	#gamespace
+		#game						
+			#tmpmessage
+			table#gametable
+		#chat
+			#messages
+			#input
+				input(type="text")
+	button#reconnect Search for new game
+
+	script
+		var displayName = "#{user.displayName}";
+		var userId = "#{user.identifier}";
+	//script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+	<link href="jquery-ui-1.10.3.custom/css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+	script(src="jquery-ui-1.10.3.custom/js/jquery-1.9.1.js")
+	script(src="jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js")
+	script(src="/socket.io/socket.io.js")
+	script(src="/javascripts/hobochess.js")

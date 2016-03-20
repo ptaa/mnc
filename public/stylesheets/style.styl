@@ -1,0 +1,109 @@
+html
+body
+	padding: 0
+	margin: 0
+	font: 18px "Lucida Grande", Helvetica, Arial, sans-serif
+
+*
+	// Use border-box since it is easier
+	// see blog post: http://paulirish.com/2012/box-sizing-border-box-ftw/
+	box-sizing: border-box;
+
+#loading
+#login
+	font: 18px "Lucida Grande", Helvetica, Arial, sans-serif
+	height: 150px;
+	margin-top: -75px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	width: 100%;
+
+#gamespace
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+	#tmpboard
+		font: 16px "Lucida Console", Monaco, monospace
+a
+	color: #00B7FF
+
+#gamespace
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+
+// Hide the game on start
+#gamespace
+	display: none
+
+// Hide the reconnect button until needed
+#reconnect
+	display: none
+	position: absolute
+	top: 7px
+	left: 552px	
+	width: 150px
+	height: 30px
+
+#chat
+#game
+	position: absolute
+	top: 0
+	bottom: 0
+	background: white
+#chat
+	left: 0
+	width: 200px
+	background: #eee
+
+	#messages
+		position: absolute
+		bottom: 56px
+		width: 100%
+		background: #fee
+
+		.message
+			span
+				margin: 3px 3px
+			.timestamp
+				font-weight: bold
+				color: red
+			.name
+				font-weight: bold
+			.text
+				display: block
+
+	#input
+		background: #fff
+		border-top: 1px solid #000
+		bottom: 0
+		padding: 5px
+		position: absolute
+		width: 100%
+		height: 56px
+
+		input
+			width: 100%
+		
+#game
+	left: 200px
+	background: #eef
+
+#gametable
+	border-collapse: collapse
+
+	td
+		border: 1px dotted gray
+		cursor: pointer
+		height: 20px
+		width: 20px
+		text-align: center
+
+// Hide chat for users with small screens
+@media (max-width: 770px)
+	#chat
+		display: none
+		width: 0
+	#game
+		left: 0
